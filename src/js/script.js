@@ -1,50 +1,28 @@
+'use strict'
+
 @@include('jquery-3.5.1.min.js')
 
 window.addEventListener('DOMContentLoaded', () => {
 	
 	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //!Меню бургер
 // // // // // // // // // // // // // // // // // // // // //// // // // // // // // // // // // // // // // //
-	// const headerList = document.querySelector('.header__list');
-	// const headerItem = document.querySelectorAll('.header__item');
-	// const headerBurger = document.querySelector('.header__burger');
+	const headerList = document.querySelector('.header__list');
+	const headerItem = document.querySelectorAll('.header__item');
+	const headerBurger = document.querySelector('.header__burger');
 
-	// headerBurger.addEventListener('click', () => {
-	//     headerBurger.classList.toggle('header__burger_active');
-	//     headerList.classList.toggle('header__list_active');
-	// });
+	headerBurger.addEventListener('click', () => {
+	    headerBurger.classList.toggle('header__burger_active');
+	    headerList.classList.toggle('header__list_active');
+	});
 
-	// headerItem.forEach(item => {
-	//     item.addEventListener('click', () => {
-	//        headerBurger.classList.toggle('header__burger_active');
-	//         headerList.classList.toggle('header__list_active');
-	//     });
-	// }); 
+	headerItem.forEach(item => {
+	    item.addEventListener('click', () => {
+	       headerBurger.classList.toggle('header__burger_active');
+	        headerList.classList.toggle('header__list_active');
+	    });
+	}); 
 // // // // // // // // // // // // // // // // // // // // //// // // // // // // // // // // // // // // // //
 
 //!Слайдер

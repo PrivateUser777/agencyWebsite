@@ -1,6 +1,6 @@
 // TODO ******************Адаптация шрифта, отступов и т.д.**********************************************
-$maxWidthPolotno: 1920;
-$maxWidth: 1170;
+$maxWidthPolotno: 1600;
+$maxWidth: 1210;
 
 @mixin adaptiv-value($property, $startSize, $minSize, $type){
 	$addSize: $startSize - $minSize;
