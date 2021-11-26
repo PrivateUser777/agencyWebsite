@@ -1,7 +1,97 @@
+.main{
+	flex: 1 1 100%;
+}
 
 
+//!Стили для секции Промо
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+.promo {
+	@include adaptiv-value("padding-top", 243, 150, 1);
+	@include adaptiv-value("padding-bottom", 182, 80, 1);
+	position: relative;
 
+	&__container{
+		position: relative;
+	}
 
+	&__body {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__content {
+		text-align: center;
+		max-width: 751px;
+		@media(max-width: $md1+'px'){
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		font-family: 'LemonMilk';
+		line-height: 85%;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		color: #ffffff;
+		@include adaptiv-value("font-size", 158.8, 57, 1);
+	}
+
+	&__subtitle{
+		font-family: 'LemonMilk';
+		line-height: 94%;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: #ffffff;
+		margin-bottom: 64px;
+		@include adaptiv-value("font-size", 96.1, 30, 1);
+	}
+
+	&__button {
+		display: flex;
+		margin: 0 auto;
+		justify-content: center;
+		align-items: center;
+		@include adaptiv-value("max-width", 192, 160, 1);
+		height: 54px;
+		background-color: #ffffff;
+		box-shadow: -4px 11px 40px 0px rgba(0,1,1,0.46);
+		border-radius: 50px;
+		font-family: Lato;
+		@include adaptiv-value("font-size", 21, 16, 1);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		color: #242424;
+		&:hover{
+			color: #fff;
+			background-color: #9c9c9c;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		right: -165px;
+		top: -145px;
+		z-index: 1;
+		@media(max-width: $md1+'px'){
+			display: none;
+		}
+	}
+
+	&__fon-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		img{
+			z-index: -1;
+		}
+	}
+}
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 
 
