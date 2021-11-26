@@ -49,24 +49,10 @@
 	}
 
 	&__button {
-		display: flex;
 		margin: 0 auto;
-		justify-content: center;
-		align-items: center;
-		@include adaptiv-value("max-width", 192, 160, 1);
-		height: 54px;
-		background-color: #ffffff;
-		box-shadow: -4px 11px 40px 0px rgba(0,1,1,0.46);
-		border-radius: 50px;
-		font-family: Lato;
-		@include adaptiv-value("font-size", 21, 16, 1);
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.025em;
-		color: #242424;
 		&:hover{
-			color: #fff;
-			background-color: #9c9c9c;
+			color: #2600ff;
+			background-color: rgba(206, 206, 206, 0.376);
 		}
 	}
 
@@ -94,11 +80,92 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 
+//!Стили для секции Who we are
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+.whoweare {
+	position: relative;
+	@include adaptiv-value("padding-top", 100, 50, 1);
+	@include adaptiv-value("padding-bottom", 100, 50, 1);
+
+	&::after{
+		content: "";
+		position: absolute;
+		z-index: -2;
+		width: 1000px;
+		height: 1000px;
+		background-color: #171717;
+		top: -500px;
+		right: -150px;
+		transform: rotate(45deg);
+		@media(max-width: 1500px){
+			right: -300px;
+		}
+		@media(max-width: 1250px){
+			right: -400px;
+		}
+		@media(max-width: 1100px){
+			right: -600px;
+		}
+		@media(max-width: $md2+'px'){
+			display: none;
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		@media(max-width: $md2+'px'){
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		flex: 0 1 506px;
+		@media(max-width: $md2+'px'){
+			text-align: center;
+			flex: none;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 56, 20, 1);
+	}
+
+	&__text {
+		@include adaptiv-value("margin-bottom", 70, 40, 1);
+	}
+
+	&__button {
+		background-color: #bc2e3a;
+		color: #ffffff;
+		&:hover{
+			box-shadow: 0 0 0 #bc2e3a;
+			color: #fcff53;
+		}
+		@media(max-width: $md2+'px'){
+			margin: 0 auto;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__image {
+		max-width: 767px;
+		@media(max-width: $md2+'px'){
+			max-width: 100%;
+		}
+		img{
+			width: 100%;
+			margin-right: -48px;
+		}
+	}
+}
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 
+//!Стили для секции What we do
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
-
-
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 
 
